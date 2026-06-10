@@ -1,38 +1,75 @@
+[update-readmes]   Mode: rewrite — migrating to template structure...
 # blincus
 
-```
- ____  _ _
-|  _ \| (_)
-| |_) | |_ _ __   ___ _   _ ___
-|  _ <| | | '_ \ / __| | | / __|
-| |_) | | | | | | (__| |_| \__ \
-|____/|_|_|_| |_|\___|\__,_|___/
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/blincus)
 
-```
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Manage development containers with Incus
+## Architecture
 
-[Documentation](https://blincus.dev)
-[Discourse](https://universal-blue.discourse.group/)
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
+## Install
 
-## Usage as a flake
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-[![FlakeHub](https://img.shields.io/endpoint?url=https://flakehub.com/f/ublue-os/blincus/badge)](https://flakehub.com/flake/ublue-os/blincus)
-
-Add blincus to your `flake.nix`:
-
-```nix
-{
-  inputs.blincus.url = "https://flakehub.com/f/ublue-os/blincus/*.tar.gz";
-
-  outputs = { self, blincus }: {
-    # Use in your outputs
-  };
-}
-
+```bash
+git clone https://github.com/Interested-Deving-1896/blincus.git
+cd blincus
 ```
 
-## Reminders / Notes
-- [ ] todo add check for genisoimage/mkisofs
-sudo ln -s /usr/bin/genisoimage mkisofs
+## Usage
+
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/blincus`](https://github.com/Interested-Deving-1896/blincus) and mirrored through:
+
+```
+Interested-Deving-1896/blincus  ──►  OpenOS-Project-OSP/blincus  ──►  OpenOS-Project-Ecosystem-OOC/blincus
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+[Apache-2.0](https://github.com/Interested-Deving-1896/blincus/blob/main/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
