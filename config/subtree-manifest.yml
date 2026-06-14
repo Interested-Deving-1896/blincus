@@ -1,0 +1,120 @@
+# config/subtree-manifest.yml
+#
+# Declares the component relationships for the Blincus platform umbrella.
+#
+# Blincus is a local-first, provider-agnostic development environment platform
+# built on Incus. This manifest wires together all stack layers so
+# manage-subtrees.sh can keep them current.
+#
+# See ARCHITECTURE.md for the full stack diagram and component descriptions.
+
+# ── Subtrees (merged history, local prefix) ───────────────────────────────────
+# Components whose source is vendored directly into this repo.
+subtrees: []
+# Nothing vendored as subtrees yet. Components are tracked as submodules
+# (pointers to their own repos) rather than merged copies.
+
+# ── Submodules (pinned pointer, .gitmodules entry) ────────────────────────────
+# Each component fork is registered here. manage-subtrees.sh keeps them
+# pinned to the latest default branch HEAD on each weekly sync.
+submodules:
+  # Runtime layer
+  - name: incus
+    url: https://github.com/Interested-Deving-1896/incus
+    path: components/runtime/incus
+    branch: main
+    shallow: true
+
+  - name: incus-os
+    url: https://github.com/Interested-Deving-1896/incus-os
+    path: components/runtime/incus-os
+    branch: main
+    shallow: true
+
+  - name: distrobuilder
+    url: https://github.com/Interested-Deving-1896/distrobuilder
+    path: components/runtime/distrobuilder
+    branch: main
+    shallow: true
+
+  - name: firecracker-containerd
+    url: https://github.com/Interested-Deving-1896/firecracker-containerd
+    path: components/runtime/firecracker-containerd
+    branch: main
+    shallow: true
+
+  # Orchestration layer
+  - name: talos
+    url: https://github.com/Interested-Deving-1896/talos
+    path: components/orchestration/talos
+    branch: main
+    shallow: true
+
+  - name: talos-incus
+    url: https://github.com/Interested-Deving-1896/talos-incus
+    path: components/orchestration/talos-incus
+    branch: main
+    shallow: true
+
+  - name: omni-talos
+    url: https://github.com/Interested-Deving-1896/omni-talos
+    path: components/orchestration/omni-talos
+    branch: main
+    shallow: true
+
+  - name: extensions-talos
+    url: https://github.com/Interested-Deving-1896/extensions-talos
+    path: components/orchestration/extensions-talos
+    branch: main
+    shallow: true
+
+  # Developer UX layer
+  - name: distrobox
+    url: https://github.com/Interested-Deving-1896/distrobox
+    path: components/ux/distrobox
+    branch: main
+    shallow: true
+
+  - name: devpod
+    url: https://github.com/Interested-Deving-1896/devpod
+    path: components/ux/devpod
+    branch: main
+    shallow: true
+
+  - name: devcontainers-cli
+    url: https://github.com/Interested-Deving-1896/devcontainers-cli
+    path: components/ux/devcontainers-cli
+    branch: main
+    shallow: true
+
+  - name: claude-devcontainer-bootstrap
+    url: https://github.com/Interested-Deving-1896/claude-devcontainer-bootstrap
+    path: components/ux/claude-devcontainer-bootstrap
+    branch: main
+    shallow: true
+
+  # Image / update layer
+  - name: rugix
+    url: https://github.com/Interested-Deving-1896/rugix
+    path: components/images/rugix
+    branch: main
+    shallow: true
+
+  - name: ashos
+    url: https://github.com/Interested-Deving-1896/ashos
+    path: components/images/ashos
+    branch: main
+    shallow: true
+
+# ── Umbrella repos (this repo aggregates children as submodules) ──────────────
+# Disabled — blincus itself is the umbrella. Children are declared above
+# as submodules rather than using the umbrella auto-init pattern.
+umbrella:
+  enabled: false
+  prefix: components
+  children: []
+
+# ── Nested submodule policy ───────────────────────────────────────────────────
+nested:
+  recurse: false
+  max_depth: 2
