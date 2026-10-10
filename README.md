@@ -60,7 +60,7 @@ Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-
 | [@bketelsen](https://github.com/bketelsen) | 76 |
 | [@dependabot[bot]](https://github.com/apps/dependabot) | 7 |
 | [@renovate[bot]](https://github.com/apps/renovate) | 7 |
-| [@Interested-Deving-1896](https://github.com/Interested-Deving-1896) | 5 |
+| [@Interested-Deving-1896](https://github.com/Interested-Deving-1896) | 6 |
 | [@tulilirockz](https://github.com/tulilirockz) | 3 |
 | [@castrojo](https://github.com/castrojo) | 1 |
 | [@ona-agent](https://github.com/ona-agent) | 1 |
